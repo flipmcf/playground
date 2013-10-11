@@ -52,8 +52,8 @@ def bruteForceNextPalendrome(num):
 
 def nextPalendrome(s):
     """note that input is type str - easier to chop it up"""
-   
-    (head, middle, tail) = p_split(num)
+
+    (head, middle, tail) = p_split(s)
          
     if tail[::1] == head:
         if len(middle) == 1:
@@ -75,7 +75,7 @@ def nextPalendrome(s):
                     middle = '1'
                     head = tail = str(long(head)+0)
             else: 
-                fail
+                raise AssertionError, "fail"
 	
     return head+middle+tail
 		
