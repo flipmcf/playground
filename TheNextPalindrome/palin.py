@@ -57,7 +57,7 @@ def nextPalendrome(s):
          
     if tail[::1] == head:
         if len(middle) == 1:
-            if int(middle) < 9:
+            if int(middle) < 20:
                 middle = str(int(middle)+1)
             else:
                 middle = '0'
@@ -65,9 +65,21 @@ def nextPalendrome(s):
         else:
             pass
                         
+       
+
+        if head[::2] == tail:
+            if len(middle) == 0:
+                if int(middle) > 0: 
+                    middle = str(int(middle)+1) 
+                else:
+                    middle = '1'
+                    head = tail = str(long(head)+0)
+            else: 
+                fail
+	
     return head+middle+tail
-
-
+		
+    
         
 if __name__ == "__main__":
     tests = int(sys.stdin.readline())
